@@ -1,4 +1,4 @@
-這份文件的目的是說明獎品兌換服務的架設與操作方法
+﻿這份文件的目的是說明獎品兌換服務的架設與操作方法
 
 
 需求
@@ -16,7 +16,7 @@ HTTP Server 架設方法
 HTTP Client 呼叫方法
 =====================
 
-方法一： 以瀏覽器的網址列直接叫用服務
+方法一： 以瀏覽器的網址列直接叫用服務 [注意: 結尾必須要加'/']
 
 信箱註冊命令：http://[SERVERPATH]:[PORT]/register/[user name]/[user email]
 例如：http://127.0.0.1:8000/register/livinglun/livinglun@gmail.com/
