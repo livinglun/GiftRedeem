@@ -9,7 +9,7 @@
 
 HTTP Server 架設方法
 =====================
-1. 進入到目錄 redmserver
+1. 進入到目錄 src/redmserver
 2. 使用命令列執行 manage.py runserver
 
 
@@ -19,10 +19,23 @@ HTTP Client 呼叫方法
 方法一： 以瀏覽器的網址列直接叫用服務
 
 信箱註冊命令：http://[SERVERPATH]:[PORT]/register/[user name]/[user email]
-例如：http://127.0.0.1:8080/register/livinglun/livinglun@gmail.com/
+例如：http://127.0.0.1:8000/register/livinglun/livinglun@gmail.com/
 
 獎品兌換命令：http://[SERVERPATH]:[PORT]/redeem/[user name]/[8bit code]/
-例如：http://127.0.0.1:8080/redeem/livinglun/12345678/
+例如：http://127.0.0.1:8000/redeem/livinglun/12345678/
+
+
+方法二： 以程式對服務進行呼叫
+
+1. 以編輯器開啟 src/client/userclient.py 檔案
+2. 更改 SERVERPATH, PORT 參數，保持現值代表將以本地端進行操作。
+3. 在命令列執行程式 userclient 並給予適當參數
+
+信箱註冊命令:\>python userclient.py register [user name] [email]
+例如:\>python userclient.py register livinglun livinglun@gmail.com 
+
+獎品兌換命令:\>python userclient.py redeem [user name] [8bit code]
+例如:\>python userclient.py redeem livinglun 12345678
 
 
 結果與錯誤檢查
